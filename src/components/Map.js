@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import GoogleMapReact from "google-map-react";
 import LocationMarker from "./LocationMark.js";
-import LocationInfo from "./LocationInfo.js";
+import FireDetail from './FireDetail/FireDetail.js';
 
 const Map = ({ eventData, center, zoom }) => {
     
@@ -31,16 +31,16 @@ const Map = ({ eventData, center, zoom }) => {
       >
         {markers}
       </GoogleMapReact>
-      {fireInfo && <LocationInfo info={fireInfo} />}
+      {fireInfo && <FireDetail eventDetail={fireInfo}/>}
     </div>
   );
 };
 
 Map.defaultProps = {
   center: {
-    lat: 42.3265,
-    lng: -122.8756,
+    lat: 41.023017, 
+    lng: -101.039127,
   },
-  zoom: 10,
+  zoom: 5,
 };
 export default Map;

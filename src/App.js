@@ -1,6 +1,7 @@
 import Map from "./components/Map.js";
 import { useState, useEffect } from "react";
 import Loader from "./components/Loader";
+import Navbar from "./components/Navbar/Navbar.js";
 
 function App() {
   const [eventData, setEventData] = useState([]);
@@ -23,10 +24,10 @@ function App() {
     fetchEvents();
   }, []);
   return (
-    <div>
-      <h1>Fire Tracker App</h1>
+    <>
+      <Navbar />
       {loading ? <Loader /> : <Map eventData={eventData} />}
-    </div>
+    </>
   );
 }
 

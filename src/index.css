@@ -12,9 +12,10 @@ code {
     monospace;
 }
 .map {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
+    width: 95vw;
+    height: 80vh;
+    margin: auto;
+    margin-top: 50px;
 }
 
 .location-marker {
